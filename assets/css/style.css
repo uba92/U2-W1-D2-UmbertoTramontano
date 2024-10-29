@@ -148,6 +148,11 @@ h1 + p {
     font-size: 1.4rem;
   }
 
+  h1 {
+    position: relative;
+    z-index: 1;
+  }
+
   h2 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -155,6 +160,12 @@ h1 + p {
 
   .imgLeft {
     float: left;
+  }
+
+  .underline {
+    position: relative;
+    bottom: 2.3em;
+    opacity: 0.5;
   }
 }
 
@@ -169,6 +180,11 @@ h1 + p {
     font-size: 1.2rem;
   }
 
+  h1 {
+    position: relative;
+    z-index: 1;
+  }
+
   h2 {
     font-size: 1.4rem;
     font-weight: 700;
@@ -176,6 +192,12 @@ h1 + p {
 
   .imgLeft {
     float: left;
+  }
+
+  .underline {
+    position: relative;
+    bottom: 2.3em;
+    opacity: 0.5;
   }
 }
 
