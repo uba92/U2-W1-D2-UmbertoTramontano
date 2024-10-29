@@ -1,10 +1,10 @@
 /* IMPOSTAZIONI GENERALI */
 
 body {
-  font-family: Poppins, "Helvetica Neue", sans-serif;
+  font-family: Poppins, 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   padding: 15px;
-  background-image: url("../img/sfondo.png");
+  background-image: url('../img/sfondo.png');
   background-position: center center;
 }
 
@@ -19,7 +19,11 @@ hr {
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,6 +31,9 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 @media screen and (min-width: 800px) {
@@ -81,7 +88,7 @@ header nav li a:hover {
   color: red;
 }
 header nav li a::before {
-  content: "\22c6\0020";
+  content: '\22c6\0020';
 }
 
 /* MAIN */
@@ -122,6 +129,27 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/*Immagine underline sotto 'template per i post'*/
+h1 span {
+  position: relative;
+  z-index: 0;
+}
+
+h1 span img {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  right: 5px;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 p,
@@ -187,6 +215,7 @@ h1 + p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  float: left;
 }
 ul,
 ol {
@@ -219,6 +248,7 @@ iframe {
     width: 50%;
     margin-inline: -2px;
     vertical-align: middle;
+    height: 267px;
   }
 
   iframe {
@@ -329,7 +359,11 @@ aside div p:last-child {
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
